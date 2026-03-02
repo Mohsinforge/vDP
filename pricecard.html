@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        font-family: sans-serif;
+        background: whitesmoke; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        background: white;
+        width: 300px;
+        border-radius: 10px;
+        overflow: hidden; /* Keeps content inside */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+
+    /* Header Styles */
+    .header {
+        padding: 30px 20px;
+        color: white;
+        /* This creates the pointed bottom shape */
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+        margin-bottom: 20px;
+    }
+
+    .basic .header { background: #00b894; }
+    .extended .header { background: #e17055; }
+    .premium .header { background: #00cec9; }
+
+    .price { font-size: 40px; font-weight: bold; }
+    .price span { font-size: 16px; }
+
+    /* Body Styles */
+    .features {
+        list-style: none;
+        padding: 0 20px;
+        text-align: left;
+    }
+
+    .features li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .check { color: #00b894; font-weight: bold; }
+    .cross { color: #d63031; font-weight: bold; }
+
+    /* Button Styles */
+    .btn {
+        width: 80%;
+        padding: 12px;
+        margin: 20px auto;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        display: block;
+    }
+
+    .basic .btn { background: #00b894; }
+    .extended .btn { background: #e17055; }
+    .premium .btn { background: #00cec9; }
+
+    .btn:hover { opacity: 0.9; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- Basic Card -->
+    <div class="card basic">
+        <div class="header">
+            <h3>Basic</h3>
+            <div class="price">$14<span>.99</span></div>
+        </div>
+        <ul class="features">
+            <li>One Addons Domain <span class="check">✓</span></li>
+            <li>100GB Storage <span class="check">✓</span></li>
+            <li>Tech Support <span class="cross">✗</span></li>
+            <li>Data Transfer <span class="cross">✗</span></li>
+        </ul>
+        <button class="btn">Purchase</button>
+    </div>
+
+    <!-- Extended Card -->
+    <div class="card extended">
+        <div class="header">
+            <h3>Extended</h3>
+            <div class="price">$16<span>.99</span></div>
+        </div>
+        <ul class="features">
+            <li>Five Addons Domain <span class="check">✓</span></li>
+            <li>200GB Storage <span class="check">✓</span></li>
+            <li>Tech Support <span class="check">✓</span></li>
+            <li>Data Transfer <span class="cross">✗</span></li>
+        </ul>
+        <button class="btn">Purchase</button>
+    </div>
+
+    <!-- Premium Card -->
+    <div class="card premium">
+        <div class="header">
+            <h3>Premium</h3>
+            <div class="price">$18<span>.99</span></div>
+        </div>
+        <ul class="features">
+            <li>10 Addons Domain <span class="check">✓</span></li>
+            <li>Unlimited Storage <span class="check">✓</span></li>
+            <li>Tech Support <span class="check">✓</span></li>
+            <li>Data Transfer <span class="check">✓</span></li>
+        </ul>
+        <button class="btn">Purchase</button>
+    </div>
+
+</div>
+
+</body>
+</html>
